@@ -3,7 +3,7 @@ import matplotlib.pyplot as plt
 import pandas as pd
 
 temperature=np.linspace(15,40,100) # generates temeprature values between 15C to 40C
-sales=50 + 7 * (temperature-10) + np.random.normal(0,20,size=len(temperature)) #creates linear relarion with sales and temperature
+sales=50 + 7 * (temperature-10) + np.random.normal(0,20,size=len(temperature)) #creates linear relation with sales and temperature
 sales=np.maximum(sales, 10)# non negative sales
 df=pd.DataFrame({"Temperature": temperature, "Ice_Cream_Sales": sales})# save dataset
 df.to_csv("sales.csv", index=False)
